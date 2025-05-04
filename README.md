@@ -18,17 +18,36 @@ This is a simulation of the robust booking platform, Airbnb. The goal of this cl
 
 
 ## Technology Stack
-- Django: web framework for building RESTful APIs
-- PostgreSQL: a relational database for managing user and property data
-- GraphQL: query language useful for large,complex and interrelated data
-- Celery: for handling asynchronous tasks
-- Redis: a in-memory store for caching and session management
-- Docker: containerization tool for creating dev environments
-- Github Actions: CI/CD tool for testing and deploying
+- **Django:** web framework for building RESTful APIs
+- **PostgreSQL:** a relational database for managing user and property data
+- **GraphQL:** query language useful for large,complex and interrelated data
+- **Celery:** for handling asynchronous tasks
+-** Redis:** a in-memory store for caching and session management
+- **Docker:** containerization tool for creating dev environments
+-**Github Actions:** CI/CD tool for testing and deploying
 
 ## Database Design
+- **Users:** ``{ id(pk), name, email, password, profile picture}`` 
+    *A user can have multiple bookings, properties, reviews and payments*
+
+- **Properties:** ``{id(pk), owner_id(fk), name, price_per_ni total_rooms, address, status}`` 
+    *A property can have multiple bookings, reviews and payments*
+
+- **Bookings:**: ``{id(pk), user_id(fk), property_id(fk), payment, start_date, end_date,status}``
+    *A booking can have a single user, property and payment*
+
+- **Reviews**: ``{id(pk), property_id(fk), user_id(fk), comment,}`` 
+    *A review can have one user and one property*
+
+- **Payments**: ``{id(pk), user_id(fk), property_id(fk), booking, payment_date, amount, status}`` 
+    *A payment has a single user, property and booking*
 
 ## Feature Breakdown
+- **Property Management**: Owners can Create, Update, Read and Delete Property Listings
+- **Booking Management**: Guests can Create, Retrieve, Update and Cancel bookings
+- **User Authentication**: Guests can Create, authenticate, Delete, Update user profiles
+- **Review System**: Guests can Create, Post, Update and Delete reviews
+- **Payment Processing**: Guests can process payment with a 3rd-party service
 
 ## API Security
 
