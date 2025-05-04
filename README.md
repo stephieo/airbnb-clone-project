@@ -18,9 +18,13 @@ This is a simulation of the robust booking platform, Airbnb. The goal of this cl
 
 
 ## Technology Stack
-- Django
-- PostgreSQL
-- GraphQL
+- Django: web framework for building RESTful APIs
+- PostgreSQL: a relational database for managing user and property data
+- GraphQL: query language useful for large,complex and interrelated data
+- Celery: for handling asynchronous tasks
+- Redis: a in-memory store for caching and session management
+- Docker: containerization tool for creating dev environments
+- Github Actions: CI/CD tool for testing and deploying
 
 ## Database Design
 
