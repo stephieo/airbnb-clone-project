@@ -27,7 +27,7 @@ This is a simulation of the robust booking platform, Airbnb. The goal of this cl
 -**Github Actions:** CI/CD tool for testing and deploying
 
 ## Database Design
-- **Users:** ``{ id(pk), name, email, password, profile picture}`` 
+- **Users:** ``{ id(pk), name, email, password, profile picture, role}`` 
     *A user can have multiple bookings, properties, reviews and payments*
 
 - **Properties:** ``{id(pk), owner_id(fk), name, price_per_ni total_rooms, address, status}`` 
@@ -50,5 +50,23 @@ This is a simulation of the robust booking platform, Airbnb. The goal of this cl
 - **Payment Processing**: Guests can process payment with a 3rd-party service
 
 ## API Security
+- Authentication
+- Authorization
+- Rate limiting
+- Data Encryption
+- Input Validation
+- Data Monitoring
+
+These security measures  guard against unauthorized access to an application,  unauthorized data access during application use, DDoS attacks, injection attacks, access to sensitive data, and  undetected attacks.
 
 ## CI/CD Pipeline
+CI/CD pipelines are automated workflows for building, testing and deploying code changes to the desired environment. This helps to reduce human error and increase code quality while helping teams increase collaboration and release new updates faster
+
+### Common CI/CD tools
+- Git/Github: for version control
+- GitHub Actions: for CI/CD orchestration
+- Docker: for consistent development, test and deployment environments
+- Kubernetes: for container orchestration and deployment
+
+## Contributors
+- Stephanie Olulesho 
